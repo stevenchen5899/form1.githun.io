@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式網頁</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 100vw; /* 設置容器寬度為視口寬度 */
+            margin: 0 auto;
+            padding: 20px 0; /* 移除左右填充，確保與螢幕同寬 */
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100vw; /* 設置圖片寬度為視口寬度 */
+            height: auto;
+        }
+
+        .text-container {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .form-container {
+            margin: 20px 0;
+            width: 100vw; /* 設置表單寬度為視口寬度 */
+        }
+
+        .form-container iframe {
+            width: 100%; /* 使用百分比寬度讓它自適應 */
+            height: 60vh; /* 使用百分比高度讓它自適應 */
+            border: none;
+        }
+
+        @media (max-width: 600px) {
+            .form-container iframe {
+                height: 80vh; /* 手機上增加高度 */
+            }
+
+            .form-container {
+                font-size: 25px; /* 手機上增加字體大小 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 圖片 -->
+        <div class="image-container">
+            <img src="https://img2.imgtp.com/2024/05/25/nbXRG2ps.png" alt="示例圖片">
+        </div>
+        
+        <!-- 嵌入Google表單 -->
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbojsbm10CnW7OR9GglohaFd6Rn-l4-2JZCyAFU-pmAAwDNQ/viewform?embedded=true" width="640" height="2752" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+    </div>
+</body>
+</html>
